@@ -1,0 +1,181 @@
+:root {
+    --color-1: #5a2e53;
+    --color-2: #aaa;
+    --color-3: #444;
+    --color-4: #fff;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--color-4);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 30% 1fr 20%;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+    margin: auto;
+    width: 900px;
+}
+
+main {
+    grid-area: main;
+    background-color: black;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--color-1);
+    display: flex;
+    flex-direction: column;
+}
+
+header > div > hr {
+    width: 15rem;
+}
+
+header > div {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+header > div > * {
+    text-align: center;
+}
+
+header > div > h1 {
+    font-weight: 400;
+}
+
+header > div > h4 {
+    font-weight: 400;
+}
+
+header > ul {
+    list-style: none;
+}
+
+header > ul {
+    display: flex;
+    justify-content: center;
+}
+
+header > ul > li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+}
+
+header > ul > li > a {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-4);
+    text-decoration: none;
+}
+
+.selected {
+    background-color: var(--color-4);
+}
+
+.selected > a {
+    color: var(--color-1);
+}
+
+header > div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    grid-area: footer;
+    background-image: url("https://picsum.photos/id/249/1900/620");
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer > h4 {
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+footer > hr {
+    width: 25rem;
+}
+
+footer > h2 {
+    font-weight: 400;
+}
+
+main {
+    background-color: var(--color-2);
+    display: grid;
+    padding: 4rem;
+    gap: 4rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card > img {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--color-4);
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card > .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.card > .info {
+    color: var(--color-2);
+}
+
+.card > .info > hr {
+    width: 10rem;
+    color: var(--color-3);
+}
+
+.card > .info > article {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.card > .info > h5 {
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.card > .info > h2 {
+    margin-top: 0.3rem;
+    font-weight: 400;
+    color: var(--color-3);
+}
+
+.card > .info > .read-more {
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--color-2);
+    padding: 1rem;
+    border: 0.1rem solid var(--color-2);
+    border-radius: 1rem;
+    text-transform: uppercase;
+}
